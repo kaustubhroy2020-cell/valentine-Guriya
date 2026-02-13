@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Valentine's Day Guriya ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', cursive;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+}
+
+/* Hidden YouTube player for background music */
+#bg-music {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0;
+}
+
+.card {
+    background: rgba(255, 0, 100, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 25px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 30px rgba(255, 0, 100, 0.6);
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.05em;
+    line-height: 1.6em;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: white;
+    color: #ff4b7d;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff4b7d;
+    color: white;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+    color: #ff004f;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Background Music (starts at 0:33) -->
+<iframe id="bg-music"
+src="https://www.youtube.com/embed/NB7WuqWzDhw?start=33&autoplay=1&mute=1&loop=1&playlist=NB7WuqWzDhw"
+allow="autoplay">
+</iframe>
+
+<div class="card">
+    <h1>Happy First Valentine’s Day, Guriya ❤️</h1>
+
+    <p>
+        <strong>My sweetest Guriya,</strong><br><br>
+        Happy very first Valentine’s Day, my love. 🌹<br><br>
+        You came into my life and made everything brighter and more beautiful.
+        Your smile gives me peace, your voice gives me comfort, and your presence makes my world feel complete.<br><br>
+        This is our first Valentine’s Day, but it’s only the beginning of many more memories together.<br><br>
+        You are my happiness, my peace, and my favorite person.
+        I love you more than words can express. ❤️<br><br>
+        <strong>Forever yours.</strong>
+    </p>
+
+    <button onclick="showLove()">Click for a Surprise 💌</button>
+</div>
+
+<script>
+function showLove() {
+    alert("I Love You So Much Guriya ❤️ Forever & Always!");
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 6000);
+}
+
+setInterval(createHeart, 500);
+</script>
+
+</body>
+</html>
